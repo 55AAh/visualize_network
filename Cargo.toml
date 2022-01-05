@@ -1,0 +1,17 @@
+[package]
+name = "visualize_network"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+sdl2 = { version = "0.35.0", features = ["unsafe_textures", "image", "ttf"] }
+indexmap = "1.7.0"
+slab = "0.4.5"
+rand = "0.8.4"
+hex-literal = "0.3.3"
+clap = "3.0.0-beta.5"
+serde = { version = "1.0.130", features = ["derive"] }
+serde_json = "1.0.69"
+uuid = { version = "0.8.2", features = ["serde", "v4"] }
