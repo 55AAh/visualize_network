@@ -34,17 +34,17 @@ impl dyn Ether {
 pub struct EtherInterface {
     owner_node: NodeId,
     id_in_owner: NodeInterfaceId,
-    connected_ether: Cell<Option<EtherId>>,
+    _connected_ether: Cell<Option<EtherId>>,
 }
 
 impl EtherInterface {
     pub fn from_node_interface(interface: &NodeInterface) -> EtherInterface {
         let (owner_node, id_in_owner) = interface.get_to_owner();
-        let connected_ether = Cell::new(interface.get_connected_ether());
+        let _connected_ether = Cell::new(interface.get_connected_ether());
         EtherInterface {
             owner_node,
             id_in_owner,
-            connected_ether,
+            _connected_ether,
         }
     }
 
